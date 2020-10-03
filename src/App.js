@@ -1,24 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
+import Nav from './components/Nav';
+import Banner from './components/Banner';
+import Collections from './components/Collections';
+import config from './api/config';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Nav />
+      <Banner />
+      <Collections
+        title='Netflix Originals'
+        collectionUrl={config.fetchNetflixOriginals}
+        showPosters={true}
+      />
+      <Collections title='Horror Movies' collectionUrl={config.fetchHorror} />
+      <Collections title='War Movies' collectionUrl={config.fetchWar} />
+      <Collections
+        title='Animated Movies'
+        collectionUrl={config.fetchAnimations}
+      />
+      <Collections
+        title='Documentries'
+        collectionUrl={config.fetchDocumentries}
+      />
+      <Collections title='Action Movies' collectionUrl={config.fetchActions} />
+      <Collections title='Best Dramas' collectionUrl={config.fetchBestDramas} />
     </div>
   );
 }
