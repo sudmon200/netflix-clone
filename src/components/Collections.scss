@@ -1,8 +1,9 @@
 .movieListRow {
-  padding: 0px 0px 0px 20px;
+  padding: 0px 48px 0px 30px;
+  letter-spacing: 1px;
   h2 {
     text-transform: capitalize;
-    padding: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 20px;
     font-size: 18px;
     color: white;
     font-weight: 400;
@@ -14,7 +15,7 @@
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
-  padding: 20px 20px 35px 10px;
+  padding: 20px 30px 20px 10px;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -42,7 +43,7 @@
 .banner {
   position: relative;
   height: 80vh;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   .banner_container {
     height: 80vh;
     background: rgb(20, 20, 20);
@@ -75,7 +76,7 @@
       outline: none;
       padding: 15px 50px;
       border-radius: 5px;
-      margin: 5px 10px 0 0;
+      margin: 15px 10px 0 0;
       cursor: pointer;
       background-color: rgba(24, 24, 24, 0.75);
       color: white;
@@ -86,5 +87,40 @@
       background-color: #e6e6e6;
       transition: all 0.2s;
     }
+  }
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+
+  //Animation
+  /* This timing applies on the way OUT */
+  transition-timing-function: ease-in;
+
+  /* Quick on the way out */
+  transition: 0.5s;
+
+  &.showNav {
+    background-color: #090909;
+  }
+  & .nav__logo {
+    position: fixed;
+    top: 18px;
+    left: 50px;
+    width: 100px;
+    object-fit: contain;
+  }
+  & .nav__avatar {
+    position: fixed;
+    right: 50px;
+    top: 15px;
+    width: 30px;
+    object-fit: contain;
   }
 }
