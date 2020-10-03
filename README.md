@@ -6,3 +6,9 @@
     2. Thumbnails for Geners 
 3. Authentication
 4. 
+
+
+### Build with
+React
+Movie Trailer https://www.npmjs.com/package/movie-trailer
+React YouTube https://www.npmjs.com/package/react-youtube
