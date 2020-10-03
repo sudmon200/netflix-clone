@@ -1,4 +1,4 @@
-###### Netflix clone with ReactJS
+# Netflix clone with ReactJS
 
 1. Hero Banner - Load random movies from a genre or network id
 2. Movie Collections - Displays collectoins of movies geners
