@@ -10,5 +10,7 @@
 
 ### Build with
 React
+
 Movie Trailer https://www.npmjs.com/package/movie-trailer
+
 React YouTube https://www.npmjs.com/package/react-youtube
