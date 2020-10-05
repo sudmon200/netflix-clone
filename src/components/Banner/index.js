@@ -1,8 +1,10 @@
 import React from 'react';
-import { BASE_URLS } from '../api/config';
+import { BASE_URLS } from '../../api/config';
 import { useSelector } from 'react-redux';
-import { selectMovieCollections } from '../redux/movieCollectionSlice';
-import { truncate } from '../appConfig';
+import { selectMovieCollections } from '../../redux/movieCollectionSlice';
+import { truncate } from '../../appUtility';
+
+import './Banner.scss';
 
 function Banner() {
   const movieCollections = useSelector(selectMovieCollections);

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { BASE_URLS } from '../api/config';
-import TrailerBox from './TrailerBox';
+import { BASE_URLS } from '../../api/config';
+import TrailerBox from '../../components/TrailerBox';
 import movieTrailer from 'movie-trailer';
-import { ytOpts } from '../appConfig';
+import { ytOpts } from '../../appConfig';
+
+import './CollectionRow.scss';
 
 function CollectionRow({ collections, showPosters }) {
   const [trailerUrl, setTrailerUrl] = useState();

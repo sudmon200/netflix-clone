@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import CollectionRow from './CollectionRow';
-import { fetchMovieCollections } from '../redux/actions';
+import CollectionRow from '../../components/CollectionRow';
+import { fetchMovieCollections } from '../../redux/actions';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   selectMovieCollections,
@@ -8,7 +8,7 @@ import {
   setAnimationCollection,
   setActionCollection,
   setDocumentaryCollection,
-} from '../redux/movieCollectionSlice';
+} from '../../redux/movieCollectionSlice';
 
 import './Collections.scss';
 
