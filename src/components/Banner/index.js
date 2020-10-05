@@ -3,6 +3,7 @@ import { BASE_URLS } from '../../api/config';
 import { useSelector } from 'react-redux';
 import { selectMovieCollections } from '../../redux/movieCollectionSlice';
 import { truncate } from '../../appUtility';
+import { Link } from 'react-router-dom';
 
 import './Banner.scss';
 
@@ -17,6 +18,7 @@ function Banner() {
     backgroundImage =
       randomMovie &&
       `url(${BASE_URLS.backdrop_original}${randomMovie?.backdrop_path})`,
+    id = randomMovie && randomMovie?.id,
     title = (randomMovie && randomMovie?.original_title) || randomMovie?.title,
     overview = randomMovie && truncate(randomMovie?.overview, 150);
 
@@ -34,7 +36,9 @@ function Banner() {
           <h1>{title}</h1>
           <div className='banner__description'>{overview}</div>
           <button>Play</button>
-          <button>More Info</button>
+          <Link to={`/movie/${id}`}>
+            <button>More Info</button>
+          </Link>
         </div>
       </div>
     </header>

@@ -1,0 +1,61 @@
+.movieInfo {
+  font-weight: 100;
+}
+.movieInfo__wrapperBg {
+  padding: 100px 50px;
+  background: linear-gradient(
+    0deg,
+    #141414 1%,
+    rgba(20, 20, 20, 0.7) 100%,
+    rgba(20, 20, 20, 0.9) 100%,
+    rgba(20, 20, 20, 0) 100%
+  );
+}
+.movieInfo__wrapper {
+  display: flex;
+  padding: 20px 0 20px 0;
+
+  & .movieInfo__thumbnail {
+    img {
+      border-radius: 5px;
+    }
+  }
+}
+.movieInfo__contents {
+  padding: 50px 0px 50px 50px;
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  .movieInfo__description {
+    margin: 30px 0 10px 0;
+    line-height: 28px;
+    font-size: 16px;
+  }
+  .movieInfo__releaseDate {
+    color: grey;
+    padding-left: 10px;
+    font-weight: 100;
+  }
+  .MuiSvgIcon-root {
+    color: grey;
+    margin: 0px 20px 0 10px;
+    cursor: pointer;
+    &:hover {
+      color: #ffad01;
+    }
+  }
+  .movieInfo__stats {
+    color: #ffad01;
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    & div {
+      margin-right: 20px;
+      & span {
+        color: grey;
+      }
+    }
+  }
+}

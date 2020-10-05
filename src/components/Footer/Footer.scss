@@ -1,0 +1,21 @@
+.footer {
+  border-top: 1px dotted #272727;
+  color: grey;
+  font-size: 12px;
+  margin: 100px 50px 20px 50px;
+  padding: 20px 20px 0px 10px;
+  p {
+    margin: 5px 0px;
+  }
+  .footer__tmdb {
+  }
+  .footer__sm {
+    margin-bottom: 20px;
+  }
+  .footer__tmdbLogo {
+    height: 30px;
+  }
+  .footer__smLogo {
+    height: 40px;
+  }
+}
