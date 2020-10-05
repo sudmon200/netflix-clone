@@ -3,11 +3,11 @@ import { BASE_URLS } from '../../api/config';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import StarsIcon from '@material-ui/icons/Stars';
 import TrendingUpIcon from '@material-ui/icons/TrendingUp';
+import TrendingDownIcon from '@material-ui/icons/TrendingDown';
 import PlaylistAddIcon from '@material-ui/icons/PlaylistAdd';
 
 function MovieInfoHeader({ movieInfo }) {
   const title = movieInfo.title || movieInfo.original_title,
-    backgroundImageUrl = BASE_URLS.backdrop_original + movieInfo.backdrop_path,
     posterImageUrl = BASE_URLS.poster_thumbnail + movieInfo.poster_path;
 
   return (
@@ -21,7 +21,11 @@ function MovieInfoHeader({ movieInfo }) {
           <span className='movieInfo__releaseDate'>
             ({new Date().getFullYear(movieInfo.release_date)})
           </span>
-          <TrendingUpIcon style={{ color: '#33FF3F' }} />
+          {movieInfo.vote_average > 7 ? (
+            <TrendingUpIcon style={{ color: '#33FF3F' }} />
+          ) : (
+            <TrendingDownIcon style={{ color: '#E50A13' }} />
+          )}
         </h1>
         <div className='movieInfo__stats'>
           <div>

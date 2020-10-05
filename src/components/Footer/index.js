@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div className='footer'>
       <div className='footer__sm'>
-        <p> Developed by:</p>
+        <p>Weaved by:</p>
         <a href='https://github.com/sudmon200'>
           <img
             className='footer__smLogo'
@@ -22,7 +22,7 @@ function Footer() {
           alt='TMDB'
         />
         <p className='footer__tmdbDisclaimer'>
-          This product uses the TMDb API but is not endorsed or certified by
+          * This product uses the TMDb API but is not endorsed or certified by
           TMDb.
         </p>
       </div>

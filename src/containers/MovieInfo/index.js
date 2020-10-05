@@ -33,16 +33,29 @@ function MovieInfo() {
     BASE_URLS.backdrop_original + movieInfo.backdrop_path;
 
   return (
-    <div
-      className='movieInfo'
-      style={{
-        backgroundSize: 'cover',
-        backgroundImage: `url(${backgroundImageUrl})`,
-        backgroundPosition: 'top center',
-      }}
-    >
-      <div className='movieInfo__wrapperBg'>
-        <MovieInfoHeader movieInfo={movieInfo} />
+    <div className='movieInfo'>
+      <div
+        style={{
+          backgroundSize: 'cover',
+          backgroundImage: `url(${backgroundImageUrl})`,
+          backgroundPosition: 'top center',
+        }}
+      >
+        <div className='movieInfo__wrapperBg'>
+          <MovieInfoHeader movieInfo={movieInfo} />
+        </div>
+      </div>
+      <div className='movieInfo__review'>
+        <h3>Dummy Text for Review</h3>
+        Ambition is important in film making and it is always reassuring to see
+        film-makers pushing as hard as they can against their budgets to produce
+        something creative and dynamic. Unfortunately those behind Money Plane
+        found themselves somewhat defeated by lack of funds. Their name actors
+        including Kelsey Grammar, Denise Richards and Thomas Jane all look like
+        they did a single day’s filming at individual locations. Like a number
+        of Bruce Willis’ recent films the leads have their scenes spread across
+        the movie but over relatively few scenes and single locations to make
+        their involvement appear... read the rest.
       </div>
     </div>
   );
