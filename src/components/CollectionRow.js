@@ -7,7 +7,7 @@ import { ytOpts } from '../appConfig';
 function CollectionRow({ collections, showPosters }) {
   const [trailerUrl, setTrailerUrl] = useState();
 
-  //handle onclick
+  //handle onclick, Youtube
   const showYoutube = (title) => {
     if (trailerUrl) {
       setTrailerUrl('');

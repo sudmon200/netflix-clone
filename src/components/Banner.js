@@ -2,24 +2,21 @@ import React from 'react';
 import { BASE_URLS } from '../api/config';
 import { useSelector } from 'react-redux';
 import { selectMovieCollections } from '../redux/movieCollectionSlice';
+import { truncate } from '../appConfig';
 
 function Banner() {
   const movieCollections = useSelector(selectMovieCollections);
 
-  function truncate(str, n) {
-    return str.length > n ? str.substr(0, n - 1) + '...' : str;
-  }
-
-  const collections = movieCollections?.netflixOriginals[0];
-  const randomMovie =
-    collections && collections[Math.floor(Math.random() * collections.length)];
-
-  const backgroundImage =
-    randomMovie &&
-    `url(${BASE_URLS.backdrop_original}${randomMovie?.backdrop_path})`;
-  const title =
-    (randomMovie && randomMovie?.original_title) || randomMovie?.title;
-  const overview = randomMovie && truncate(randomMovie?.overview, 150);
+  // get one genre (ex:netflixOriginals) and get a random movie to show in banner
+  const collections = movieCollections?.netflixOriginals[0],
+    randomMovie =
+      collections &&
+      collections[Math.floor(Math.random() * collections.length)],
+    backgroundImage =
+      randomMovie &&
+      `url(${BASE_URLS.backdrop_original}${randomMovie?.backdrop_path})`,
+    title = (randomMovie && randomMovie?.original_title) || randomMovie?.title,
+    overview = randomMovie && truncate(randomMovie?.overview, 150);
 
   return (
     <header
