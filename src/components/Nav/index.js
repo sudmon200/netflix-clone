@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import './Nav.scss';
 
@@ -19,11 +20,13 @@ function Nav() {
 
   return (
     <div className={`${showNav ? 'showNav' : ''} nav`}>
-      <img
-        className='nav__logo'
-        src='https://brand.netflix.com/static/assets/icons/netflix_logo.svg'
-        alt='Netflix Clone'
-      />
+      <a href={'/'}>
+        <img
+          className='nav__logo'
+          src='https://brand.netflix.com/static/assets/icons/netflix_logo.svg'
+          alt='Netflix Clone'
+        />
+      </a>
       <img
         className='nav__avatar'
         src='https://ih0.redbubble.net/image.618427277.3222/flat,1000x1000,075,f.u2.jpg'

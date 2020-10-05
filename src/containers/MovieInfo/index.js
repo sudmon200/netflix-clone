@@ -46,16 +46,31 @@ function MovieInfo() {
         </div>
       </div>
       <div className='movieInfo__review'>
-        <h3>Dummy Text for Review</h3>
-        Ambition is important in film making and it is always reassuring to see
-        film-makers pushing as hard as they can against their budgets to produce
-        something creative and dynamic. Unfortunately those behind Money Plane
-        found themselves somewhat defeated by lack of funds. Their name actors
-        including Kelsey Grammar, Denise Richards and Thomas Jane all look like
-        they did a single day’s filming at individual locations. Like a number
-        of Bruce Willis’ recent films the leads have their scenes spread across
-        the movie but over relatively few scenes and single locations to make
-        their involvement appear... read the rest.
+        <h3>Dummy Text Review</h3>
+        <p>
+          Ambition is important in film making and it is always reassuring to
+          see film-makers pushing as hard as they can against their budgets to
+          produce something creative and dynamic. Unfortunately those behind
+          Money Plane found themselves somewhat defeated by lack of funds. Their
+          name actors including Kelsey Grammar, Denise Richards and Thomas Jane
+          all look like they did a single day’s filming at individual locations.
+          Like a number of Bruce Willis’ recent films the leads have their
+          scenes spread across the movie but over relatively few scenes and
+          single locations to make their involvement appear... read the rest.
+        </p>
+        <br />
+        <h3>Dummy Text Review</h3>
+        <p>
+          Ambition is important in film making and it is always reassuring to
+          see film-makers pushing as hard as they can against their budgets to
+          produce something creative and dynamic. Unfortunately those behind
+          Money Plane found themselves somewhat defeated by lack of funds. Their
+          name actors including Kelsey Grammar, Denise Richards and Thomas Jane
+          all look like they did a single day’s filming at individual locations.
+          Like a number of Bruce Willis’ recent films the leads have their
+          scenes spread across the movie but over relatively few scenes and
+          single locations to make their involvement appear... read the rest.
+        </p>
       </div>
     </div>
   );
