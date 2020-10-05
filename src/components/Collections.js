@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
+import CollectionRow from './CollectionRow';
 import { fetchMovieCollections } from '../redux/actions';
-
 import { useSelector, useDispatch } from 'react-redux';
 import {
   selectMovieCollections,
@@ -9,7 +9,7 @@ import {
   setActionCollection,
   setDocumentaryCollection,
 } from '../redux/movieCollectionSlice';
-import CollectionRow from './CollectionRow';
+
 import './Collections.scss';
 
 function Collections({ genre, title, collectionUrl, showPosters }) {
@@ -17,40 +17,40 @@ function Collections({ genre, title, collectionUrl, showPosters }) {
 
   const dispatch = useDispatch();
 
+  //Dispatch & Update Store
   useEffect(() => {
     fetchMovieCollections(collectionUrl, genre).then(function (result) {
       switch (genre) {
         case 'netflixOriginals':
-          dispatch(
+          return dispatch(
             setNetflixOriginalsCollection({
               movieCollection: result,
             })
           );
-          break;
         case 'action':
-          dispatch(
+          return dispatch(
             setActionCollection({
               movieCollection: result,
             })
           );
-          break;
         case 'animation':
-          dispatch(
+          return dispatch(
             setAnimationCollection({
               movieCollection: result,
             })
           );
-          break;
         case 'documentary':
-          dispatch(
+          return dispatch(
             setDocumentaryCollection({
               movieCollection: result,
             })
           );
-          break;
-
         default:
-          break;
+          return dispatch(
+            setNetflixOriginalsCollection({
+              movieCollection: result,
+            })
+          );
       }
     });
     return () => {
@@ -58,6 +58,7 @@ function Collections({ genre, title, collectionUrl, showPosters }) {
     };
   }, [collectionUrl, dispatch, genre]);
 
+  // Pass genres specific collections
   function getCollection() {
     switch (genre) {
       case 'netflixOriginals':

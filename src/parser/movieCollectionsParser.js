@@ -1,9 +1,8 @@
 /**
- * parse the movies
+ * parse the movie collections
  * @param {Array} movies
  */
 function movieCollectionParser(movies = []) {
-  // console.log('movies ===>', movies);
   return movies.map(parseMovies);
 }
 

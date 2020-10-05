@@ -10,7 +10,7 @@ export const movieCollectionSlice = createSlice({
   },
   reducers: {
     setNetflixOriginalsCollection: (state, action) => {
-      console.log('action ==>', action);
+      //console.log('action ==>', action);
       state.netflixOriginals = [
         ...state.netflixOriginals,
         action.payload.movieCollection,
