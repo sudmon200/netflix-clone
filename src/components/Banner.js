@@ -1,46 +1,39 @@
-import React, { useState, useEffect } from 'react';
-import requests from '../api/config';
-import axios from '../api/axios';
+import React from 'react';
 import { BASE_URLS } from '../api/config';
-
-const getBannerFrom = requests.fetchNetflixOriginals;
+import { useSelector } from 'react-redux';
+import { selectMovieCollections } from '../redux/movieCollectionSlice';
 
 function Banner() {
-  const [movies, setMovies] = useState([]);
-
-  //One random movie from the collections (netflix originals)
-  useEffect(() => {
-    async function fetchMovies() {
-      const request = await axios.get(getBannerFrom);
-      const collections = request.data.results;
-      const getRandomMovieFromCollections =
-        collections &&
-        collections[Math.floor(Math.random() * collections.length)];
-      setMovies(getRandomMovieFromCollections);
-    }
-    fetchMovies();
-  }, []);
+  const movieCollections = useSelector(selectMovieCollections);
 
   function truncate(str, n) {
     return str.length > n ? str.substr(0, n - 1) + '...' : str;
   }
-  // console.table(movies);
+
+  const collections = movieCollections?.netflixOriginals[0];
+  const randomMovie =
+    collections && collections[Math.floor(Math.random() * collections.length)];
+
+  const backgroundImage =
+    randomMovie &&
+    `url(${BASE_URLS.backdrop_original}${randomMovie?.backdrop_path})`;
+  const title =
+    (randomMovie && randomMovie?.original_title) || randomMovie?.title;
+  const overview = randomMovie && truncate(randomMovie?.overview, 150);
 
   return (
     <header
       className='banner'
       style={{
         backgroundSize: 'cover',
-        backgroundImage: `url(${BASE_URLS.backdrop_original}${movies?.backdrop_path})`,
+        backgroundImage: backgroundImage,
         backgroundPosition: 'top center',
       }}
     >
       <div className='banner_container'>
         <div className='banner__contents'>
-          <h1>{movies?.original_title || movies?.title}</h1>
-          <div className='banner__description'>
-            {movies?.overview ? truncate(movies?.overview, 150) : null}
-          </div>
+          <h1>{title}</h1>
+          <div className='banner__description'>{overview}</div>
           <button>Play</button>
           <button>More Info</button>
         </div>

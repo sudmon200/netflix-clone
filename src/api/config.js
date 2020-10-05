@@ -7,7 +7,7 @@ const BASE_URLS = {
   poster_thumbnail: 'http://image.tmdb.org/t/p/w220_and_h330_face',
 };
 
-const GENRE_ID = {
+const GENRE_IDS = {
   action: '28',
   animation: '16',
   bestDrama: '18',
@@ -17,18 +17,18 @@ const GENRE_ID = {
   war: '10752',
 };
 
-const NETWORK_ID = {
+const NETWORK_IDS = {
   netflixOriginals: '213',
 };
 
 const requests = {
-  fetchNetflixOriginals: `/discover/movie?api_key=${API_KEY}&with_networks=${NETWORK_ID.netflixOriginals}`,
-  fetchBestDramas: `/discover/movie?api_key=${API_KEY}&with_genres=${GENRE_ID.bestDrama}`,
-  fetchActions: `/discover/movie?api_key=${API_KEY}&with_genres=${GENRE_ID.action}`,
-  fetchAnimations: `/discover/movie?api_key=${API_KEY}&with_genres=${GENRE_ID.animation}`,
-  fetchDocumentries: `/discover/movie?api_key=${API_KEY}&with_genres=${GENRE_ID.documentary}`,
-  fetchHorror: `/discover/movie?api_key=${API_KEY}&with_genres=${GENRE_ID.horror}`,
-  fetchWar: `/discover/movie?api_key=${API_KEY}&with_genres=${GENRE_ID.war}`,
+  netflixOriginals: `/discover/movie?api_key=${API_KEY}&with_networks=${NETWORK_IDS.netflixOriginals}`,
+  drama: `/discover/movie?api_key=${API_KEY}&with_genres=${GENRE_IDS.bestDrama}`,
+  action: `/discover/movie?api_key=${API_KEY}&with_genres=${GENRE_IDS.action}`,
+  animation: `/discover/movie?api_key=${API_KEY}&with_genres=${GENRE_IDS.animation}`,
+  documentary: `/discover/movie?api_key=${API_KEY}&with_genres=${GENRE_IDS.documentary}`,
+  horror: `/discover/movie?api_key=${API_KEY}&with_genres=${GENRE_IDS.horror}`,
+  war: `/discover/movie?api_key=${API_KEY}&with_genres=${GENRE_IDS.war}`,
 };
 
 export { BASE_URLS };

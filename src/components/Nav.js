@@ -15,8 +15,6 @@ function Nav() {
     });
   }, []);
 
-  console.log(showNav);
-
   return (
     <div className={`${showNav ? 'showNav' : ''} nav`}>
       <img
