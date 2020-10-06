@@ -5,12 +5,27 @@ function Footer() {
   return (
     <div className='footer'>
       <div className='footer__sm'>
-        <p>Weaved by:</p>
-        <a href='https://github.com/sudmon200'>
+        <p>Weaved by: Sudip Mondal</p>
+
+        <a href='https://www.sudipmondal.com/sudmon200'>
           <img
             className='footer__smLogo'
             src='https://user-images.githubusercontent.com/71149670/95108042-58026300-0758-11eb-9d8b-fac036799f16.png'
             alt='Sudip Mondal'
+          />
+        </a>
+        <a href='https://github.com/sudmon200'>
+          <img
+            className='footer__ghLogo'
+            src='https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg'
+            alt='github'
+          />
+        </a>
+        <a href='https://www.linkedin.com/in/mondalsudip/'>
+          <img
+            className='footer__liLogo'
+            src='https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg'
+            alt='linkedIn'
           />
         </a>
       </div>

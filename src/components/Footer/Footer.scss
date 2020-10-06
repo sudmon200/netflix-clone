@@ -17,5 +17,27 @@
   }
   .footer__smLogo {
     height: 40px;
+    filter: grayscale(100%);
+    margin-right: 10px;
+    border-radius: 3px;
+    &:hover {
+      filter: none;
+    }
+  }
+  .footer__ghLogo {
+    height: 40px;
+    background-color: #464646;
+    margin-right: 10px;
+    border-radius: 3px;
+    &:hover {
+      background-color: rgb(7, 95, 167);
+    }
+  }
+  .footer__liLogo {
+    height: 40px;
+    filter: grayscale(100%);
+    &:hover {
+      filter: none;
+    }
   }
 }
