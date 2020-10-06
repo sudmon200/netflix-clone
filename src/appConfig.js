@@ -35,4 +35,12 @@ const ytOpts = {
   },
 };
 
-export { genres, ytOpts };
+const ytOptsBanner = {
+  height: '860',
+  width: '100%',
+  playerVars: {
+    autoplay: 1,
+  },
+};
+
+export { genres, ytOpts, ytOptsBanner };

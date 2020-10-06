@@ -4,10 +4,14 @@ import { useSelector } from 'react-redux';
 import { selectMovieCollections } from '../../redux/movieCollectionSlice';
 import { truncate } from '../../appUtility';
 import { Link } from 'react-router-dom';
+import movieTrailer from 'movie-trailer';
+import TrailerBox from '../../components/TrailerBox';
+import { ytOptsBanner } from '../../appConfig';
 
 import './Banner.scss';
 
 function Banner() {
+  const [trailerUrl, setTrailerUrl] = useState();
   const [randomMovie, setRandomMovie] = useState();
   const movieCollections = useSelector(selectMovieCollections);
   const collections = movieCollections?.netflixOriginals[0];
@@ -28,6 +32,21 @@ function Banner() {
     title = randomMovie?.title || randomMovie?.original_title,
     overview = randomMovie && truncate(randomMovie?.overview, 150);
 
+  //handle onclick, Youtube
+  const showYoutube = (title) => {
+    if (trailerUrl) {
+      setTrailerUrl('');
+    } else {
+      movieTrailer(title)
+        .then((url) => {
+          const queryStrings = new URL(url).search;
+          const urlParams = new URLSearchParams(queryStrings);
+          setTrailerUrl(urlParams.get('v'));
+        })
+        .catch((error) => console.log(error));
+    }
+  };
+
   return (
     <header
       className='banner'
@@ -41,12 +60,23 @@ function Banner() {
         <div className='banner__contents'>
           <h1>{title}</h1>
           <div className='banner__description'>{overview}</div>
-          <button>Play</button>
-          <Link to={`/movie/${id}`}>
-            <button>More Info</button>
-          </Link>
+          <div className='banner__buttons'>
+            <button onClick={() => showYoutube(title)}>
+              {!trailerUrl ? 'Play' : 'Close'}
+            </button>
+            <Link to={`/movie/${id}`}>
+              <button>More Info</button>
+            </Link>
+          </div>
         </div>
       </div>
+      {trailerUrl && (
+        <TrailerBox
+          className='banner__youTube'
+          trailerUrl={trailerUrl}
+          opts={ytOptsBanner}
+        />
+      )}
     </header>
   );
 }

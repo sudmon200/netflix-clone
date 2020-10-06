@@ -7,7 +7,7 @@ function Footer() {
       <div className='footer__sm'>
         <p>Weaved by: Sudip Mondal</p>
 
-        <a href='https://www.sudipmondal.com/sudmon200'>
+        <a href='https://www.sudipmondal.com/'>
           <img
             className='footer__smLogo'
             src='https://user-images.githubusercontent.com/71149670/95108042-58026300-0758-11eb-9d8b-fac036799f16.png'

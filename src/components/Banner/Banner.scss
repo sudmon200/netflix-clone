@@ -2,6 +2,13 @@
   position: relative;
   height: 80vh;
   margin-bottom: 10px;
+  & .banner__youTube {
+    height: 80vh;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+  }
+
   .banner_container {
     height: 80vh;
     background: rgb(20, 20, 20);
@@ -19,6 +26,13 @@
     bottom: 100px;
     width: 50vw;
     padding: 10px 20px 10px 50px;
+    & .banner__buttons {
+      z-index: 2;
+      position: absolute;
+      & button {
+        width: 170px;
+      }
+    }
     & h1 {
       font-size: 4rem;
       font-weight: 800;

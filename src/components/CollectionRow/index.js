@@ -48,7 +48,13 @@ function CollectionRow({ collections, showPosters }) {
           ))
         )}
       </div>
-      {trailerUrl && <TrailerBox trailerUrl={trailerUrl} opts={ytOpts} />}
+      {trailerUrl && (
+        <TrailerBox
+          className='movieListRow__youTube'
+          trailerUrl={trailerUrl}
+          opts={ytOpts}
+        />
+      )}
     </div>
   );
 }
