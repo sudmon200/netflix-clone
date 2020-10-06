@@ -11,7 +11,7 @@
 #### Working Features:
 1. Hero Banner - Load random movie from a genre or network id
 2. Play movie trailer in the Hero Banner area
-3. Movie Collections - Displays rows of collectoins from differnt genres
+3. Movie Collections - Displays rows of collectoins from particular genres
     1. Posters for Netflix Originals
     2. Thumbnails for Geners 
     3. Play movie trailer by clicking on a poster, a click again will stop the trailer
@@ -44,5 +44,6 @@ Known Issues:
 
 #### Built With
 * React, Redux 
+* TMDB API https://developers.themoviedb.org/3
 * Movie Trailer https://www.npmjs.com/package/movie-trailer
 * React YouTube https://www.npmjs.com/package/react-youtube
