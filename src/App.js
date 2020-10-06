@@ -1,33 +1,21 @@
 import React from 'react';
-import Nav from './components/Nav';
-import Banner from './components/Banner';
-import Collections from './components/Collections';
-import config from './api/config';
-import './App.css';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import Shell from './components/Shell';
+import Home from './containers/Home';
+import MovieInfo from './containers/MovieInfo';
+
+import './App.scss';
 
 function App() {
   return (
-    <div className='App'>
-      <Nav />
-      <Banner />
-      <Collections
-        title='Netflix Originals'
-        collectionUrl={config.fetchNetflixOriginals}
-        showPosters={true}
-      />
-      <Collections title='Horror Movies' collectionUrl={config.fetchHorror} />
-      <Collections title='War Movies' collectionUrl={config.fetchWar} />
-      <Collections
-        title='Animated Movies'
-        collectionUrl={config.fetchAnimations}
-      />
-      <Collections
-        title='Documentries'
-        collectionUrl={config.fetchDocumentries}
-      />
-      <Collections title='Action Movies' collectionUrl={config.fetchActions} />
-      <Collections title='Best Dramas' collectionUrl={config.fetchBestDramas} />
-    </div>
+    <Shell>
+      <Router>
+        <Switch>
+          <Route exact path='/' component={Home}></Route>
+          <Route exact path='/movie/:id' component={MovieInfo}></Route>
+        </Switch>
+      </Router>
+    </Shell>
   );
 }
 

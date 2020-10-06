@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
+import './Nav.scss';
+
 function Nav() {
   const [showNav, setShowNav] = useState();
   useEffect(() => {
@@ -15,15 +17,15 @@ function Nav() {
     });
   }, []);
 
-  console.log(showNav);
-
   return (
     <div className={`${showNav ? 'showNav' : ''} nav`}>
-      <img
-        className='nav__logo'
-        src='https://brand.netflix.com/static/assets/icons/netflix_logo.svg'
-        alt='Netflix Clone'
-      />
+      <a href={'/'}>
+        <img
+          className='nav__logo'
+          src='https://brand.netflix.com/static/assets/icons/netflix_logo.svg'
+          alt='Netflix Clone'
+        />
+      </a>
       <img
         className='nav__avatar'
         src='https://ih0.redbubble.net/image.618427277.3222/flat,1000x1000,075,f.u2.jpg'

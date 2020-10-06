@@ -1,0 +1,28 @@
+.movieListRow__movies {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px 30px 20px 10px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  & .movieListRow__movie {
+    object-fit: contain;
+    width: 100%;
+    max-height: 130px;
+    margin: 0 5px;
+    transition: transform 300ms;
+    border-radius: 5px;
+    &:hover {
+      transform: scale(1.08);
+      cursor: pointer;
+    }
+    &.poster {
+      max-height: 290px;
+      margin: 0 8px;
+      &:hover {
+        transform: scale(1.14);
+      }
+    }
+  }
+}

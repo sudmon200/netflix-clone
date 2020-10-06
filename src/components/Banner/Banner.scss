@@ -1,0 +1,33 @@
+.banner {
+  position: relative;
+  height: 80vh;
+  margin-bottom: 10px;
+  .banner_container {
+    height: 80vh;
+    background: rgb(20, 20, 20);
+    background: linear-gradient(
+      0deg,
+      #141414 1%,
+      rgba(20, 20, 20, 0.3) 30%,
+      rgba(20, 20, 20, 0.383378) 53%,
+      rgba(20, 20, 20, 0) 100%
+    );
+  }
+
+  & .banner__contents {
+    position: absolute;
+    bottom: 100px;
+    width: 50vw;
+    padding: 10px 20px 10px 50px;
+    & h1 {
+      font-size: 4rem;
+      font-weight: 800;
+    }
+    & .banner__description {
+      font-size: 1.1rem;
+      font-weight: 100;
+      line-height: 24px;
+      margin: 10px 0;
+    }
+  }
+}
