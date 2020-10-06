@@ -1,7 +1,7 @@
 # Netflix clone with ReactJS
 
 * Browse movie collections with sidewise scroll 
-* Play movie trailer in banner and in collection
+* Play movie trailer in Hero banner and in collection 
 * Detailed movie information page 
 * Hand-written stylesheet, graceful adaptation on mobile
 
