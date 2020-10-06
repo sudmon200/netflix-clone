@@ -33,10 +33,10 @@ Known Issues:
 
 
 #### Screenshots
-##### Landing page/Hero Banner
+##### Landing page > Hero Banner
 ![Screenshot 2020-10-06 at 6 12 37 PM (2)](https://user-images.githubusercontent.com/71149670/95203178-00b7cd80-0800-11eb-9a1a-1235cdc6f66f.png)
 
-##### Collections Slider
+##### Landing page > Collections Slider
 ![Screenshot 2020-10-06 at 6 12 56 PM (2)](https://user-images.githubusercontent.com/71149670/95203198-07464500-0800-11eb-98b3-18137dcc86ee.png)
 
 ##### Movie Information Page
