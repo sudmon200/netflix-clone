@@ -1,8 +1,5 @@
 # Netflix clone with ReactJS
 
-[Live Demo :rocket: ](https://netflix-clone-45239.web.app/)
-
-
 * Browse movie collections with sidewise scroll 
 * Play movie trailer in banner and in collection
 * Detailed movie information page 
@@ -16,6 +13,8 @@
     1. Posters for Netflix Originals
     2. Thumbnails for Geners 
     3. Play movie trailer by clicking on a poster, a click again will stop the trailer
+
+#### [Live Demo :rocket: ](https://netflix-clone-45239.web.app/)
 
 #### Planned Features:
 1. Authentication 
