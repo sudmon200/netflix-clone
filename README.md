@@ -6,7 +6,7 @@
 * Browse movie collections with sidewise scroll 
 * Play movie trailer in banner and in collection
 * Detailed movie information page 
-* Graceful adaptation on mobile
+* Hand-written stylesheet, graceful adaptation on mobile
 
 #### Working Features:
 1. Hero Banner - Load random movie from a genre or network id
