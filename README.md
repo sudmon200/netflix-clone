@@ -32,7 +32,7 @@ Known Issues:
 3. Add test cases, collection/genre configuarability, refactor 
 
 
-#### Demo
+#### Screenshots
 
 
 
