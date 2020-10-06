@@ -29,7 +29,7 @@
 Known Issues:
 1. click on two or more poster in different genres/collection row loads multiple YouTube players
 2. YouTube height for mobile on Hero Banner
-3. add test cases/ configuarability
+3. Add test cases/ configuarability
 
 
 #### Demo
