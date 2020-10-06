@@ -52,6 +52,6 @@ Known Issues:
 
 #### Built With
 * React, Redux 
-* TMDB API https://developers.themoviedb.org/3
 * Movie Trailer https://www.npmjs.com/package/movie-trailer
 * React YouTube https://www.npmjs.com/package/react-youtube
+* TMDB API https://developers.themoviedb.org/3
