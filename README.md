@@ -3,10 +3,10 @@
 [Live Demo :rocket: ](https://netflix-clone-45239.web.app/)
 
 
-* Browse collections with sidewise scroll 
+* Browse movie collections with sidewise scroll 
 * Play movie trailer in banner and in collection
 * Detailed movie information page 
-* Degrade gracefully on mobile 
+* Graceful adaptation on mobile
 
 #### Working Features:
 1. Hero Banner - Load random movie from a genre or network id
@@ -27,7 +27,10 @@
     5. Add to watchlist
     
 Known Issues:
-1. click on two or more poster in different genres/collection row loads same number of YouTube
+1. click on two or more poster in different genres/collection row loads multiple YouTube players
+2. YouTube height for mobile on Hero Banner
+3. add test cases/ configuarability
+
 
 #### Demo
 
