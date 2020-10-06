@@ -1,6 +1,11 @@
 # Netflix clone with ReactJS
 
-Working Features:
+* Browse collections with sidewise scroll 
+* Play Trailer in place
+* Detailed movie information 
+* Degrade gracefully on mobile 
+
+#### Working Features:
 1. Hero Banner - Load random movie from a genre or network id
 2. Play movie trailer in the Hero Banner area
 3. Movie Collections - Displays rows of collectoins from differnt genres
@@ -8,7 +13,7 @@ Working Features:
     2. Thumbnails for Geners 
     3. Play movie trailer by clicking on a poster, a click again will stop the trailer
 
-Planned Features:
+#### Planned Features:
 1. Authentication 
 2. Play and Info button on each poster/thumbnail in collections
 3. Update Movie Information page
