@@ -1,0 +1,21 @@
+{
+  "data": {
+    "popularity": 1987.369,
+    "vote_count": 1595,
+    "video": false,
+    "poster_path": "/riYInlsq2kf1AWoGm80JQW5dLKp.jpg",
+    "id": 497582,
+    "adult": false,
+    "backdrop_path": "/kMe4TKMDNXTKptQPAdOF0oZHq3V.jpg",
+    "original_language": "en",
+    "original_title": "Enola Holmes",
+    "genre_ids": [80, 18, 9648],
+    "title": "Enola Holmes",
+    "vote_average": 7.7,
+    "overview": "While searching for her missing mother, intrepid teen Enola Holmes uses her sleuthing skills to outsmart big brother Sherlock and help a runaway lord.",
+    "release_date": "2020-09-23",
+    "homepage": "http://disney.com/",
+    "status": "released",
+    "revenue": 100
+  }
+}

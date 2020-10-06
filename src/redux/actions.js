@@ -1,5 +1,5 @@
 import axios from '../api/axios';
-import movieCollectionParser from '../parser/movieCollectionsParser';
+import movieCollectionParser from '../parser/movieCollectionsParser/';
 import movieInfoParser from '../parser/movieInfoParser';
 
 export async function fetchMovieCollections(collectionUrl) {
