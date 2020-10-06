@@ -12,7 +12,6 @@ function MovieInfo() {
   const { id } = useParams();
   const movieInfo = useSelector(selectMovieInfo);
   const dispatch = useDispatch();
-  console.log('===>', id);
 
   const apiUrl = `movie/${id}?api_key=081dd474dce4fdd2c4a2704b80ef58cf`;
   //Dispatch & Update Store
@@ -27,7 +26,7 @@ function MovieInfo() {
     return () => {
       console.log('unmount....');
     };
-  }, [dispatch]);
+  }, [apiUrl, dispatch]);
 
   const backgroundImageUrl =
     BASE_URLS.backdrop_original + movieInfo.backdrop_path;

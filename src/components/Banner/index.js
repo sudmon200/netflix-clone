@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BASE_URLS } from '../../api/config';
 import { useSelector } from 'react-redux';
 import { selectMovieCollections } from '../../redux/movieCollectionSlice';
@@ -8,18 +8,24 @@ import { Link } from 'react-router-dom';
 import './Banner.scss';
 
 function Banner() {
+  const [randomMovie, setRandomMovie] = useState();
   const movieCollections = useSelector(selectMovieCollections);
+  const collections = movieCollections?.netflixOriginals[0];
 
   // get one genre (ex:netflixOriginals) and get a random movie to show in banner
-  const collections = movieCollections?.netflixOriginals[0],
-    randomMovie =
+  useEffect(() => {
+    const randomCollection =
       collections &&
-      collections[Math.floor(Math.random() * collections.length)],
-    backgroundImage =
-      randomMovie &&
-      `url(${BASE_URLS.backdrop_original}${randomMovie?.backdrop_path})`,
+      collections[Math.floor(Math.random() * collections.length)];
+    setRandomMovie(randomCollection);
+  }, [collections]);
+
+  //Extract data from object for the component
+  const backdropOriginalUrl =
+      randomMovie && BASE_URLS.backdrop_original + randomMovie?.backdrop_path,
+    backgroundImage = randomMovie && `url(${backdropOriginalUrl})`,
     id = randomMovie && randomMovie?.id,
-    title = (randomMovie && randomMovie?.original_title) || randomMovie?.title,
+    title = randomMovie?.title || randomMovie?.original_title,
     overview = randomMovie && truncate(randomMovie?.overview, 150);
 
   return (

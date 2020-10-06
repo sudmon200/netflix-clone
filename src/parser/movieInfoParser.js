@@ -3,7 +3,6 @@
  * @param {Object} movie
  */
 function movieInfoParser(movie = {}) {
-  console.log('==>', movie);
   return parseMovieInfo(movie);
 }
 
