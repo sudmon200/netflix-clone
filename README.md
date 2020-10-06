@@ -1,5 +1,6 @@
 # Netflix clone with ReactJS
 
+* Hero Banner feature one random movie on page refresh 
 * Browse movie collections with sidewise scroll 
 * Play movie trailer in Hero banner and in collection 
 * Detailed movie information page 
