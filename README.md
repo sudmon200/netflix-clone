@@ -27,7 +27,7 @@
     4. Random Movie suggestions
     5. Add to watchlist
     
-Known Issues:
+Issue Tracking:
 1. click on two or more poster in different genres/collection row loads multiple YouTube players
 2. YouTube height for mobile on Hero Banner
 3. Add test cases, collection/genre configuarability, refactor 
