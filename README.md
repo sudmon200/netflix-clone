@@ -37,6 +37,9 @@ Known Issues:
 ##### Landing page > Hero Banner
 ![Screenshot 2020-10-06 at 6 12 37 PM (2)](https://user-images.githubusercontent.com/71149670/95203178-00b7cd80-0800-11eb-9a1a-1235cdc6f66f.png)
 
+##### Landing page > Hero Banner > YouTube 
+![Screenshot 2020-10-07 at 9 12 12 PM (2)](https://user-images.githubusercontent.com/71149670/95354332-ebb36b00-08e1-11eb-99ec-36abd4a1c53a.png)
+
 ##### Landing page > Collections Slider
 ![Screenshot 2020-10-06 at 6 12 56 PM (2)](https://user-images.githubusercontent.com/71149670/95203198-07464500-0800-11eb-98b3-18137dcc86ee.png)
 
