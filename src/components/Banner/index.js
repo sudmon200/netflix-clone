@@ -14,7 +14,7 @@ function Banner() {
   const [trailerUrl, setTrailerUrl] = useState();
   const [randomMovie, setRandomMovie] = useState();
   const movieCollections = useSelector(selectMovieCollections);
-  const collections = movieCollections?.netflixOriginals[0];
+  const collections = movieCollections?.action[0];
 
   // get one genre (ex:netflixOriginals) and get a random movie to show in banner
   useEffect(() => {
@@ -57,7 +57,7 @@ function Banner() {
       }}
     >
       <div className='banner_container'>
-        <div className='banner__contents'>
+        <div className={`banner__contents ${trailerUrl ? 'ytActive' : ''}`}>
           <h1>{title}</h1>
           <div className='banner__description'>{overview}</div>
           <div className='banner__buttons'>

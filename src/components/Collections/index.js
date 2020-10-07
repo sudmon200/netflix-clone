@@ -58,6 +58,7 @@ function Collections({ genre, title, collectionUrl, showPosters }) {
     };
   }, [collectionUrl, dispatch, genre]);
 
+  console.log('movieCollections =>', movieCollections);
   // Pass genres specific collections
   function getCollection() {
     switch (genre) {

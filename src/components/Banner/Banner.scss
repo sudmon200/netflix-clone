@@ -26,6 +26,22 @@
     bottom: 100px;
     width: 50vw;
     padding: 10px 20px 10px 50px;
+    transition-timing-function: ease-in;
+    transition: 0.9s;
+    &.ytActive {
+      bottom: 0px;
+      opacity: 0.15;
+      z-index: 2;
+      & h1 {
+        font-size: 2rem;
+      }
+      & .banner__description {
+        display: none;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
     & .banner__buttons {
       z-index: 2;
       position: absolute;
