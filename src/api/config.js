@@ -1,4 +1,4 @@
-const API_KEY = '081dd474dce4fdd2c4a2704b80ef58cf';
+const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
 
 const BASE_URLS = {
   api: 'https://api.themoviedb.org/3',
@@ -31,5 +31,5 @@ const requests = {
   war: `/discover/movie?api_key=${API_KEY}&with_genres=${GENRE_IDS.war}`,
 };
 
-export { BASE_URLS };
+export { BASE_URLS, API_KEY };
 export default requests;

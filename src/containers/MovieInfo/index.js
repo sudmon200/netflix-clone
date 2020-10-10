@@ -5,6 +5,7 @@ import { fetchMovieInfo } from '../../redux/actions';
 import { BASE_URLS } from '../../api/config';
 import { useParams } from 'react-router-dom';
 import MovieInfoHeader from '../../components/MovieInfoHeader';
+import { API_KEY } from '../../api/config';
 
 import './MovieInfo.scss';
 
@@ -13,7 +14,7 @@ function MovieInfo() {
   const movieInfo = useSelector(selectMovieInfo);
   const dispatch = useDispatch();
 
-  const apiUrl = `movie/${id}?api_key=081dd474dce4fdd2c4a2704b80ef58cf`;
+  const apiUrl = `movie/${id}?${API_KEY}`;
   //Dispatch & Update Store
   useEffect(() => {
     fetchMovieInfo(apiUrl).then(function (result) {
