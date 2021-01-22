@@ -14,7 +14,7 @@ function MovieInfo() {
   const movieInfo = useSelector(selectMovieInfo);
   const dispatch = useDispatch();
 
-  const apiUrl = `movie/${id}?${API_KEY}`;
+  const apiUrl = `movie/${id}?api_key=${API_KEY}`;
   //Dispatch & Update Store
   useEffect(() => {
     fetchMovieInfo(apiUrl).then(function (result) {
